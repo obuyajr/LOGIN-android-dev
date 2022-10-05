@@ -2,10 +2,14 @@ package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
+
 
 import com.google.android.material.button.MaterialButton;
 
@@ -16,22 +20,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView username = (TextView) findViewById(R.id.username);
-        TextView password = (TextView)  findViewById(R.id.password);
 
-        MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
-        
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        //
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
-                    //if password is coreect
-                    Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this, "WRONG CREDENTIALS", Toast.LENGTH_SHORT).show();
-                }
+            public void run() {
+                Intent intent = new Intent(MainActivity.this,landing.class);
+                startActivity(intent);
+                finish();
             }
-        });
+        },2000);
         
     }
 }
