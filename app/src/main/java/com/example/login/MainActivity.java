@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                //takes you to login page/ landing page
                 Intent intent = new Intent(MainActivity.this,landing.class);
                 startActivity(intent);
                 finish();

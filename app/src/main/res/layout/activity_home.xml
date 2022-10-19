@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home"
-    android:background="@color/Linen">
+    android:background="@color/LightCyan">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,18 +20,58 @@
         />
 
     <TextView
+        android:id="@+id/PR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/PR"
+        android:layout_below="@id/welcome"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Shop Now!!"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_margin="10dp"
         android:textSize="25dp"
-        android:layout_below="@id/welcome"/>
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shopbtn"
+
+        android:layout_width="161dp"
+        android:layout_height="116dp"
+        android:layout_below="@+id/PR"
+        android:layout_centerHorizontal="true"
+        android:text="Shop Now!!"
+        android:textColor="@color/DarkRed"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/about"
+
+        android:layout_width="161dp"
+        android:layout_height="116dp"
+        android:layout_below="@+id/shopbtn"
+        android:layout_centerHorizontal="true"
+        android:text="Shop Now!!"
+        android:textColor="@color/DarkRed"
+        android:layout_marginTop="50dp"
+
+        android:textStyle="bold"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoutbtn"
+        android:layout_above="@+id/developaa"
+        android:layout_centerHorizontal="true"
+        android:text="LOGOUT"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
     <TextView
+        android:id="@+id/developaa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
